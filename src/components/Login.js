@@ -10,7 +10,7 @@ const Login = () => {
       username: '',
       password: ''
     },
-    error: ''
+    error: 'Please Enter a Username/Password'
   });
   let history = useHistory();
 
@@ -59,7 +59,10 @@ const Login = () => {
         </form>
       </div>
 
-      <p data-testid="errorMessage" className="error">{state.error}</p>
+      <p data-testid="errorMessage" className="error">
+        {state.username === '' ? state.error: state.username}
+        {state.password === '' ? state.error: state.password}
+      </p>
     </div>
   );
 };
