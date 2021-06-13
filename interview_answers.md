@@ -4,6 +4,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain what a token is used for.
 
+a token is used as a way for the server to remember interacting with a client.
+
 2. What steps can you take in your web apps to keep your data secure?
 
 3. Describe how web servers work.
