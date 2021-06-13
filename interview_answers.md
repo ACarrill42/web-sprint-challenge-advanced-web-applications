@@ -11,3 +11,5 @@ a token is used as a way for the server to remember interacting with a client.
 3. Describe how web servers work.
 
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+post request.
