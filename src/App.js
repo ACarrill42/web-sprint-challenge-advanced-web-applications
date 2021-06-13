@@ -4,8 +4,19 @@ import PrivateRoute from "./components/PrivateRoute";
 import BubblePage from "./components/BubblePage";
 import Login from "./components/Login";
 import "./styles.scss";
+import { axiosWithAuth } from "./helpers/axiosWithAuth";
 
 function App() {
+  const logout = () => {
+    axiosWithAuth().post('/login')
+    .then(res => {
+      localStorage.removeItem('token')
+      window.location.href = '/login'
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
   return (
     <Router>
       <div className="App">
