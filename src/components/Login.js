@@ -61,8 +61,8 @@ const Login = () => {
       </div>
 
       <p data-testid="errorMessage" className="error">
-        {state.username === '' ? state.error: state.username}
-        {state.password === '' ? state.error: state.password}
+        {state.username === '' ? state.error : state.username}
+        {state.password === '' ? state.error : state.password}
       </p>
     </div>
   );

@@ -11,7 +11,7 @@ const BubblePage = () => {
   const [colors, setColors] = useState([]);
   const [editing, setEditing] = useState(false);
   const {id} = useParams();
-  const history = useHistory();
+  let {push} = useHistory();
 
   useEffect(() => {
     axiosWithAuth().get('/colors')
@@ -36,8 +36,8 @@ const BubblePage = () => {
   const deleteColor = (colorToDelete) => {
     axiosWithAuth().delete(`/colors/${id}`)
     .then(res => {
-      setColors(colorToDelete)
-      history.push('/BubblePage')
+      setColors(res.data)
+      push('/BubblePage')
     })
     .catch(err => console.log(err))
   };
