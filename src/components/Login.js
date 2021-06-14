@@ -56,6 +56,7 @@ const Login = () => {
             value = {state.credentials.password}
             onChange = {handleChange}
           />
+          <button>Log In</button>
         </form>
       </div>
 

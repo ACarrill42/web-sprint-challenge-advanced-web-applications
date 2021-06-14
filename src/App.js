@@ -11,7 +11,7 @@ function App() {
     axiosWithAuth().post('/login')
     .then(res => {
       localStorage.removeItem('token')
-      window.location.href = '/login'
+      window.location.href = '/'
     })
     .catch(err => {
       console.log(err)
@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <header>
           Color Picker Sprint Challenge
-          <a data-testid="logoutButton" href="/login" onClick = {logout}>logout</a>
+          <a data-testid="logoutButton" href="/" onClick = {logout}>logout</a>
         </header> 
         <Switch>
           <PrivateRoute exact path = "/BubblePage" component = {BubblePage}/>
